@@ -289,7 +289,9 @@ h2 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ==================== إصلاح الموبايل الهندسي النهائي والمضمون ==================== */
+/* ==========================================================================
+   🚨 التعديل الحاسم: تصغير الخلفية بالكامل (Contain) لتناسب الموبايل 🚨
+   ========================================================================== */
 @media (max-width: 968px) {
     header {
         padding: 15px 20px; 
@@ -297,23 +299,25 @@ h2 {
     .logo {
         font-size: 1.4em;
     }
-    /* إخفاء اللينكات المكدسة على الموبايل لإنقاذ الـ Header */
     .navigation {
-        display: none !important; 
+        display: none !important; /* إخفاء اللينكات لإنقاذ البار العلوي */
     }
 
     section, .services-section, .game-section {
         padding: 50px 15px;
     }
 
-    /* زحزحة كاملة وتكبير للصورة عشان الأسد وكلمة Fantasy يبانوا سوا */
+    /* الـ main بعد تعديل حجم الصورة لـ contain لتظهر كاملة بدون قص */
     .main {
         padding: 0;
         flex-direction: column; 
         justify-content: flex-start; 
         background-attachment: scroll; 
-        background-position: center 30% !important; /* رفعت الصورة وسنترتها بالملي للكلمة */
-        background-size: 155% !important; /* كبرت الحجم عشان تفاصيل كلمة فانتسي تفرش وتبان */
+        
+        /* احتواء الصورة بالكامل في عرض الشاشة وتثبيتها في السقف */
+        background-size: contain !important; 
+        background-position: center top !important; 
+        background-color: #00daff; /* اللون السماوي بتاع الصورة عشان يملأ الفراغ ورا البوكس تحت */
         height: auto;
         min-height: 100vh;
     }
@@ -321,11 +325,13 @@ h2 {
     .main div {
         max-width: 100%; 
         width: 100%;
-        margin-top: 60vh; /* ترحيل البوكس الزجاجي تحت عشان يسيب الشاشة للأسد والكلمة */
+        
+        /* المارجن ده متظبط عشان البوكس يبدأ بالظبط تحت قفلة حدود الصورة المصغرة */
+        margin-top: 52vh; 
         padding: 30px 20px; 
         border-radius: 25px 25px 0 0; 
         text-align: center; 
-        box-shadow: 0 -15px 35px rgba(0, 0, 0, 0.6); 
+        box-shadow: 0 -15px 35px rgba(0, 0, 0, 0.4); 
     }
 
     h2 { font-size: 1.4em; }
