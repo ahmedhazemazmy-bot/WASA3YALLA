@@ -50,6 +50,8 @@ header {
 section {
     padding: 100px 100px;
 }
+
+/* ==================== السكشن الرئيسي للاب توب ==================== */
 .main {
     width: 100%;
     min-height: 100vh;
@@ -62,20 +64,17 @@ section {
     padding: 0 100px;
 }
 
-/* الكارت الزجاجي بعد تقليل أبعاده ومساحاته عشان كلمة Fantasy تبان بوضوح */
 .main div {
-    background: rgba(55, 0, 60, 0.45); /* خلفية موف خفيفة */
-    backdrop-filter: blur(10px); /* تأثير التغبش الزجاجي المريح للعين */
-    -webkit-backdrop-filter: blur(10px);
-    padding: 25px; /* صغرنا المساحة الداخلية عشان نلم البوكس */
-    border-radius: 20px; 
-    border: 1px solid rgba(255, 255, 255, 0.1); 
-    max-width: 500px; /* قللنا العرض الأقصى عشان البوكس ميغطيش على تفاصيل الخلفية */
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    background: rgba(55, 0, 60, 0.55); /* خلفية موف خفيفة جداً بتمرر لمعان الصورة */
+    backdrop-filter: blur(12px); /* تأثير التغبش الزجاجي المريح جداً للعين */
+    -webkit-backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 20px; /* حواف دائرية متناسقة مع الهيدر */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* إطار زجاجي رفيع يدي فخامة */
+    max-width: 500px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
     animation: fadeInUp 1.2s ease-out forwards;
 }
-
-
 
 h2 {
     font-size: 2.2em;
@@ -111,7 +110,6 @@ h2 {
     display: inline-block;
     padding: 0.937em 2.187em;
     border-radius: 12px;
-    margin-bottom: 0; /* تصفير المارجن عشان الكارت الزجاجي يحتوي الزرار صح */
     transition: 0.4s ease;
     margin-top: 15px;
     box-shadow: 0 4px 15px rgba(0, 255, 135, 0.3);
@@ -123,34 +121,9 @@ h2 {
     box-shadow: 0 6px 20px rgba(0, 255, 135, 0.5);
 }
 
-
-/* ==================== الأنيميشن والحركات التفاعلية ==================== */
-
-/* أنيميشن ظهور ونزول الهيدر */
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* أنيميشن ظهور الكلام تدريجياً وصعوده من الأسفل للأعلى */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}/* ==================== سكشن كروت الفانتازي (Services) ==================== */
+/* ==================== سكشن كروت الفانتازي (Services) ==================== */
 .services-section {
-    background-color: #37003c; /* موف الفانتازي الغامق */
+    background-color: #37003c; 
     padding: 80px 100px;
     text-align: center;
 }
@@ -183,7 +156,6 @@ h2 {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
-/* حاوية الشكل والاسم مع بعض */
 .card-visual {
     display: flex;
     flex-direction: column;
@@ -191,15 +163,13 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* الأشكال والأيقونات */
 .card-icon {
     font-size: 2.8em;
-    color: #00ff87; /* أخضر فسفوري */
+    color: #00ff87; 
     margin-bottom: 10px;
     transition: transform 0.3s ease;
 }
 
-/* اسم الخاصية تحت الشكل بالظبط */
 .chip-name {
     font-size: 1.5em;
     font-weight: 700;
@@ -215,7 +185,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* جزء الزتونة بالبلدي الخاص بكل كارت */
 .fpl-card .essence {
     font-size: 0.85em;
     color: #00ff87;
@@ -225,21 +194,20 @@ h2 {
     font-weight: 500;
 }
 
-/* ==================== تأثير الـ Hover والظلال الملونة ==================== */
 .fpl-card:hover {
     transform: translateY(-15px); 
     border-color: #00ff87; 
     box-shadow: 0 15px 35px rgba(0, 255, 135, 0.25); 
 }
 
-/* تأثير إضافي للأيقونة وهي بتلف أو بتتحرك جوه الكارت عند الـ Hover */
 .fpl-card:hover .card-icon {
     transform: scale(1.15);
     color: #02e077;
 }
+
 /* ==================== سكشن شرح اللعبة والأساطير (About Game) ==================== */
 .game-section {
-    background-color: #2b0030; /* درجة أغمق سنة من الموف عشان نفصل السكاشن عن بعض بشياكة */
+    background-color: #2b0030; 
     padding: 100px 100px;
 }
 
@@ -252,9 +220,8 @@ h2 {
     margin: 0 auto;
 }
 
-/* تنسيق بوكس الشرح الكبير */
 .game-info-box {
-    flex: 1; /* بياخد مساحة متساوية */
+    flex: 1; 
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
@@ -265,7 +232,7 @@ h2 {
 .game-info-box h2 {
     font-size: 2.2em;
     font-weight: 800;
-    color: #00ff87; /* أخضر الفانتازي عشان ينور العنوان */
+    color: #00ff87; 
     margin-bottom: 20px;
     text-transform: uppercase;
 }
@@ -277,7 +244,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* البادجات السريعة جوه بوكس الشرح */
 .game-status {
     display: flex;
     gap: 15px;
@@ -295,7 +261,6 @@ h2 {
     border: 1px solid rgba(0, 255, 135, 0.2);
 }
 
-/* تنسيق بوكس الصورة */
 .game-image-box {
     flex: 1;
     display: flex;
@@ -307,27 +272,116 @@ h2 {
     width: 100%;
     max-width: 500px;
     height: auto;
-    border-radius: 20px; /* حواف دائرية ناعمة ماشية مع الـ Navbar والكروت */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); /* ظل تقيل ومظبوط يدي فخامة للصورة */
+    border-radius: 20px; 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); 
     border: 2px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* حركة تفاعلية شيك للصورة لما تقف عليها بالماوس */
 .legends-img:hover {
-    transform: scale(1.03) rotate(1deg); /* لفة خفيفة جداً وحركة تكبير تدي حيوية */
+    transform: scale(1.03) rotate(1deg); 
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    border-color: #00ff87; /* إطار ينور أخضر عند الـ Hover */
+    border-color: #00ff87; 
 }
 
-/* ضبط السكشن لو فتحت من الموبايل عشان العناصر تيجي تحت بعض ومتخربش التصميم */
+/* ==================== الأنيميشن والحركات ==================== */
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ==========================================================================
+   🚨 جزء تظبيط الموبايل الذكي (إظهار الأسد وجملة الفانتسي بالملي) 🚨
+   ========================================================================== */
 @media (max-width: 968px) {
+    /* تظبيط الهيدر */
+    header {
+        padding: 15px 20px; 
+    }
+    .logo {
+        font-size: 1.3em;
+        letter-spacing: 1px;
+    }
+    .navigation a {
+        font-size: 0.85em;
+        padding-left: 12px; 
+    }
+
+    section, .services-section, .game-section {
+        padding: 60px 20px;
+    }
+
+    /* السكشن الرئيسي - ترحيل البوكس عشان الأسد يبان بالكامل فوق */
+    .main {
+        padding: 0;
+        flex-direction: column; /* قلب العناصر بالطول */
+        justify-content: flex-start; 
+        background-attachment: scroll; /* يمنع زوم الموبايل الإجباري */
+        background-position: center top; /* تثبيت سنترة الصورة من الأعلى لإبراز الأسد */
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .main div {
+        max-width: 100%; 
+        width: 100%;
+        margin-top: 65vh; /* بينزل البوكس لتحت خالص في الشاشة ويسيب أول 65% للأسد والجملة يلمعوا براحتهم */
+        padding: 30px 20px; 
+        border-radius: 20px 20px 0 0; /* كيرف علوي فقط ناعم ومتناسق */
+        text-align: center; 
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5); /* ضل علوي يفصل الكارت عن صورة الأسد */
+    }
+
+    h2 {
+        font-size: 1.5em; 
+    }
+    .main h2 span {
+        font-size: 0.85em;
+    }
+    .main h3 {
+        font-size: 1.05em;
+        margin-bottom: 20px;
+    }
+    .main-btn {
+        width: 100%; 
+        padding: 0.8em 1.5em;
+        margin-bottom: 0;
+    }
+
+    /* سكشن الكروت */
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .fpl-card {
+        width: 100%; 
+    }
+
+    /* سكشن شرح اللعبة */
     .game-container {
-        flex-direction: column;
+        flex-direction: column; 
+        gap: 30px;
+    }
+    .game-info-box {
+        padding: 25px 20px;
         text-align: center;
+    }
+    .game-info-box h2 {
+        font-size: 1.6em;
+    }
+    .game-info-box p {
+        font-size: 1em;
     }
     .game-status {
         justify-content: center;
     }
+    .legends-img {
+        max-width: 100%;
+    }
 }
-
