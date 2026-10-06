@@ -33,7 +33,7 @@ header {
 }
 
 .navigation {
-    display: flex !important; /* ضمان ظهور القائمة دائماً وعدم إخفائها */
+    display: flex !important; 
 }
 
 .navigation a {
@@ -122,7 +122,6 @@ h2 {
     box-shadow: 0 6px 20px rgba(0, 255, 135, 0.5);
 }
 
-/* ==================== سكشن الكروت ==================== */
 .services-section {
     background-color: #37003c; 
     padding: 80px 100px;
@@ -201,7 +200,7 @@ h2 {
     box-shadow: 0 15px 35px rgba(0, 255, 135, 0.25); 
 }
 
-/* ==================== سكشن شرح اللعبة والأساطير ==================== */
+
 .game-section {
     background-color: #2b0030; 
     padding: 100px 100px;
@@ -283,9 +282,8 @@ h2 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ==================== كود التجاوب الاحترافي للموبايل ==================== */
 @media (max-width: 768px) {
-    /* 1. حل مشكلة الناف بار واللينكات المزنوقة */
+    
     header { 
         flex-direction: column; /* اللوجو هيبقى فوق واللينكات تحته */
         padding: 15px;
@@ -302,14 +300,12 @@ h2 {
         font-size: 0.9em; 
     }
 
-    /* 2. حل مشكلة الخلفية المقطوعة والكلام اللي طاير لفوق */
     .main { 
-        padding: 130px 20px 50px; /* السحر هنا: 130 بيكسل من فوق عشان ننزل الكلام تحت الناف بار */
-        background-attachment: scroll; /* ده اللي هيعالج جليتش الموبايل ويخلي الخلفية تفرد صح */
+        padding: 130px 20px 50px; 
+        background-attachment: scroll;
         background-position: top center;
     }
 
-    /* 3. تظبيط مقاسات الصندوق الأساسي والخطوط لعين الموبايل */
     .main div { 
         max-width: 100%;
         padding: 25px;
@@ -318,7 +314,6 @@ h2 {
     .main h2 span { font-size: 0.75em; }
     .main h3 { font-size: 1.1em; margin-bottom: 20px; }
 
-    /* 4. رص الكروت والصور تحت بعض بشكل شيك */
     section, .services-section, .game-section { 
         padding: 60px 20px; 
     }
