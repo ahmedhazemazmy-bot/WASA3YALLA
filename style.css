@@ -32,6 +32,10 @@ header {
     letter-spacing: 2px;
 }
 
+.navigation {
+    display: flex !important; /* ضمان ظهور القائمة دائماً وعدم إخفائها */
+}
+
 .navigation a {
     color: #ffffff;
     text-decoration: none;
@@ -118,6 +122,7 @@ h2 {
     box-shadow: 0 6px 20px rgba(0, 255, 135, 0.5);
 }
 
+/* ==================== سكشن الكروت ==================== */
 .services-section {
     background-color: #37003c; 
     padding: 80px 100px;
@@ -196,11 +201,7 @@ h2 {
     box-shadow: 0 15px 35px rgba(0, 255, 135, 0.25); 
 }
 
-.fpl-card:hover .card-icon {
-    transform: scale(1.15);
-    color: #02e077;
-}
-
+/* ==================== سكشن شرح اللعبة والأساطير ==================== */
 .game-section {
     background-color: #2b0030; 
     padding: 100px 100px;
@@ -270,13 +271,6 @@ h2 {
     border-radius: 20px; 
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); 
     border: 2px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.legends-img:hover {
-    transform: scale(1.03) rotate(1deg); 
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    border-color: #00ff87; 
 }
 
 @keyframes slideDown {
@@ -289,106 +283,15 @@ h2 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ==========================================================================
-   🚨 الموبايل الملموم النهائي: إظهار كلمة Fantasy صريحة وإلغاء الفراغ اللبني 🚨
-   ========================================================================== */
+/* ==================== كود التجاوب البسيط جداً بدون مسح أو إخفاء لعناصر ==================== */
 @media (max-width: 968px) {
-    header {
-        padding: 12px 20px; 
-    }
-    .logo {
-        font-size: 1.3em;
-    }
-    .navigation {
-        display: none !important; /* الهيدر نضيف وفي سطر واحد ومسطرة */
-    }
-
-    section, .services-section, .game-section {
-        padding: 40px 15px;
-    }
-
-    /* السكشن الرئيسي: تحجيم الذوم ومنع تمدد الفراغ اللبني */
-    .main {
-        padding: 0 15px;
-        flex-direction: column; 
-        justify-content: flex-start; /* بيبدأ من السقف مش من النص */
-        background-attachment: scroll; 
-        
-        /* ضبط حجم الصورة بالملي عشان كلمة Fantasy الكبيرة والأسد يملوا التلت الفوقاني بالظبط */
-        background-size: 100% auto !important; 
-        background-position: center top !important; 
-        background-color: #37003c; /* دمج الفراغ بلون موف الفانتازي عشان يمسح اللبني البشع */
-        height: auto;
-        min-height: 100vh;
-    }
-
-    /* البوكس الزجاجي الملموم: قعدناه بالظبط تحت كلمة فانتسي عشان يلم الفراغ */
-    .main div {
-        background: rgba(255, 255, 255, 0.05) !important; 
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
-        max-width: 100%; 
-        width: 100%;
-        
-        /* ترحيل البوكس يبدأ بالظبط بعد 35% من طول الشاشة (مكان قفلة الصورة) */
-        margin-top: 35vh !important; 
-        padding: 25px 20px; 
-        border-radius: 20px; 
-        text-align: center;
-        animation: fadeInUp 1.2s ease-out forwards;
-    }
-
-    h2 {
-        font-size: 1.5em; 
-        color: #ffffff;
-    }
-    .main h2 span {
-        font-size: 0.85em;
-        color: #00ff87;
-        margin-top: 10px;
-    }
-    .main h3 {
-        font-size: 1.05em;
-        color: #f8f9fa;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .main-btn {
-        width: 100%; 
-        padding: 0.8em 1.5em;
-        margin-bottom: 0;
-    }
-
-    /* سكشن كروت الخدمات */
-    .section-title {
-        font-size: 1.8em;
-        margin-bottom: 30px;
-    }
-    .fpl-card {
-        width: 100%; 
-    }
-
-    /* سكشن شرح اللعبة */
-    .game-container {
-        flex-direction: column; 
-        gap: 30px;
-    }
-    .game-info-box {
-        padding: 25px 20px;
-        text-align: center;
-    }
-    .game-info-box h2 {
-        font-size: 1.6em;
-    }
-    .game-info-box p {
-        font-size: 1em;
-    }
-    .game-status {
-        justify-content: center;
-    }
-    .legends-img {
-        max-width: 100%;
-    }
+    header { padding: 15px 20px; }
+    .logo { font-size: 1.2em; }
+    .navigation a { padding-left: 10px; font-size: 0.85em; }
+    section, .services-section, .game-section { padding: 60px 20px; }
+    .main { padding: 0 20px; }
+    .main div { max-width: 100%; }
+    .cards-container { gap: 20px; }
+    .fpl-card { width: 100%; }
+    .game-container { flex-direction: column; gap: 30px; }
 }
