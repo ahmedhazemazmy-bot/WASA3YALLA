@@ -297,33 +297,37 @@ h2 {
 
 
 /* ==========================================================================
-   🚨 جزء تظبيط الموبايل الذكي (إظهار الأسد وجملة الفانتسي بالملي) 🚨
+   🚨 الإصلاح النهائي للبار العلوي وإظهار كلمة Fantasy كاملة مع الأسد 🚨
    ========================================================================== */
 @media (max-width: 968px) {
-    /* تظبيط الهيدر */
+    /* 1. إصلاح البار العلوي عشان ييجي في سطر واحد وميبوظش */
     header {
-        padding: 15px 20px; 
+        padding: 10px 15px; 
+        flex-wrap: nowrap; /* إجبار العناصر تفضل في سطر واحد */
     }
     .logo {
-        font-size: 1.3em;
-        letter-spacing: 1px;
+        font-size: 1.1em; /* تصغير اللوجو سنة عشان يوسع مكانه */
+        letter-spacing: 0.5px;
     }
     .navigation a {
-        font-size: 0.85em;
-        padding-left: 12px; 
+        font-size: 0.8em;
+        padding-left: 8px; /* تقليل المسافة بين اللينكات عشان تقعد جنب بعضها مستريحة */
     }
 
     section, .services-section, .game-section {
         padding: 60px 20px;
     }
 
-    /* السكشن الرئيسي - ترحيل البوكس عشان الأسد يبان بالكامل فوق */
+    /* 2. تظبيط الخلفية بالملي لإظهار كلمة Fantasy والأسد سوا */
     .main {
         padding: 0;
-        flex-direction: column; /* قلب العناصر بالطول */
+        flex-direction: column; 
         justify-content: flex-start; 
-        background-attachment: scroll; /* يمنع زوم الموبايل الإجباري */
-        background-position: center top; /* تثبيت سنترة الصورة من الأعلى لإبراز الأسد */
+        background-attachment: scroll; 
+        
+        /* التعديل السحري: نزلنا الصورة لتحت وخليناها تتوسط الشاشة عشان كلمة Fantasy تبان */
+        background-position: center 25%; 
+        background-size: cover;
         height: auto;
         min-height: 100vh;
     }
@@ -331,21 +335,21 @@ h2 {
     .main div {
         max-width: 100%; 
         width: 100%;
-        margin-top: 65vh; /* بينزل البوكس لتحت خالص في الشاشة ويسيب أول 65% للأسد والجملة يلمعوا براحتهم */
+        margin-top: 60vh; /* سيبنا مساحة 60% من الشاشة فوق صريحة للكلمة والأسد */
         padding: 30px 20px; 
-        border-radius: 20px 20px 0 0; /* كيرف علوي فقط ناعم ومتناسق */
+        border-radius: 20px 20px 0 0; 
         text-align: center; 
-        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5); /* ضل علوي يفصل الكارت عن صورة الأسد */
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5); 
     }
 
     h2 {
-        font-size: 1.5em; 
+        font-size: 1.4em; 
     }
     .main h2 span {
         font-size: 0.85em;
     }
     .main h3 {
-        font-size: 1.05em;
+        font-size: 1em;
         margin-bottom: 20px;
     }
     .main-btn {
@@ -354,7 +358,7 @@ h2 {
         margin-bottom: 0;
     }
 
-    /* سكشن الكروت */
+    /* سكشن كروت الخدمات */
     .section-title {
         font-size: 1.8em;
         margin-bottom: 30px;
