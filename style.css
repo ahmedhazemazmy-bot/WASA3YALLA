@@ -290,62 +290,105 @@ h2 {
 }
 
 /* ==========================================================================
-   🚨 التعديل الحاسم: تصغير الخلفية بالكامل (Contain) لتناسب الموبايل 🚨
+   🚨 الموبايل الملموم النهائي: إظهار كلمة Fantasy صريحة وإلغاء الفراغ اللبني 🚨
    ========================================================================== */
 @media (max-width: 968px) {
     header {
-        padding: 15px 20px; 
+        padding: 12px 20px; 
     }
     .logo {
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
     .navigation {
-        display: none !important; /* إخفاء اللينكات لإنقاذ البار العلوي */
+        display: none !important; /* الهيدر نضيف وفي سطر واحد ومسطرة */
     }
 
     section, .services-section, .game-section {
-        padding: 50px 15px;
+        padding: 40px 15px;
     }
 
-    /* الـ main بعد تعديل حجم الصورة لـ contain لتظهر كاملة بدون قص */
+    /* السكشن الرئيسي: تحجيم الذوم ومنع تمدد الفراغ اللبني */
     .main {
-        padding: 0;
+        padding: 0 15px;
         flex-direction: column; 
-        justify-content: flex-start; 
+        justify-content: flex-start; /* بيبدأ من السقف مش من النص */
         background-attachment: scroll; 
         
-        /* احتواء الصورة بالكامل في عرض الشاشة وتثبيتها في السقف */
-        background-size: contain !important; 
+        /* ضبط حجم الصورة بالملي عشان كلمة Fantasy الكبيرة والأسد يملوا التلت الفوقاني بالظبط */
+        background-size: 100% auto !important; 
         background-position: center top !important; 
-        background-color: #00daff; /* اللون السماوي بتاع الصورة عشان يملأ الفراغ ورا البوكس تحت */
+        background-color: #37003c; /* دمج الفراغ بلون موف الفانتازي عشان يمسح اللبني البشع */
         height: auto;
         min-height: 100vh;
     }
 
+    /* البوكس الزجاجي الملموم: قعدناه بالظبط تحت كلمة فانتسي عشان يلم الفراغ */
     .main div {
+        background: rgba(255, 255, 255, 0.05) !important; 
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
         max-width: 100%; 
         width: 100%;
         
-        /* المارجن ده متظبط عشان البوكس يبدأ بالظبط تحت قفلة حدود الصورة المصغرة */
-        margin-top: 52vh; 
-        padding: 30px 20px; 
-        border-radius: 25px 25px 0 0; 
-        text-align: center; 
-        box-shadow: 0 -15px 35px rgba(0, 0, 0, 0.4); 
+        /* ترحيل البوكس يبدأ بالظبط بعد 35% من طول الشاشة (مكان قفلة الصورة) */
+        margin-top: 35vh !important; 
+        padding: 25px 20px; 
+        border-radius: 20px; 
+        text-align: center;
+        animation: fadeInUp 1.2s ease-out forwards;
     }
 
-    h2 { font-size: 1.4em; }
-    .main h2 span { font-size: 0.85em; }
-    .main h3 { font-size: 1em; margin-bottom: 20px; }
-    .main-btn { width: 100%; padding: 0.8em 1.5em; }
+    h2 {
+        font-size: 1.5em; 
+        color: #ffffff;
+    }
+    .main h2 span {
+        font-size: 0.85em;
+        color: #00ff87;
+        margin-top: 10px;
+    }
+    .main h3 {
+        font-size: 1.05em;
+        color: #f8f9fa;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .main-btn {
+        width: 100%; 
+        padding: 0.8em 1.5em;
+        margin-bottom: 0;
+    }
 
-    .section-title { font-size: 1.8em; margin-bottom: 30px; }
-    .fpl-card { width: 100%; }
+    /* سكشن كروت الخدمات */
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .fpl-card {
+        width: 100%; 
+    }
 
-    .game-container { flex-direction: column; gap: 30px; }
-    .game-info-box { padding: 25px 20px; text-align: center; }
-    .game-info-box h2 { font-size: 1.6em; }
-    .game-info-box p { font-size: 1em; }
-    .game-status { justify-content: center; }
-    .legends-img { max-width: 100%; }
+    /* سكشن شرح اللعبة */
+    .game-container {
+        flex-direction: column; 
+        gap: 30px;
+    }
+    .game-info-box {
+        padding: 25px 20px;
+        text-align: center;
+    }
+    .game-info-box h2 {
+        font-size: 1.6em;
+    }
+    .game-info-box p {
+        font-size: 1em;
+    }
+    .game-status {
+        justify-content: center;
+    }
+    .legends-img {
+        max-width: 100%;
+    }
 }
